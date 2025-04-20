@@ -2,11 +2,12 @@
 
 namespace App\Repositories\Interfaces;
 
-interface TaskRepositoryInterface
+interface UserRepositoryInterface
 {
-    public function all();
+    public function index();
 
     public function find($id);
+    public function findByEmail($email);
 
     public function create(array $data);
 

@@ -22,7 +22,7 @@ public function store(Request $request){
 
     ]);
     $task= $this->taskService->createTask($validated);
-    return response()->json(['message'=>'Task Created Successfully',$task],201);
+    return response()->json(['message'=>'Task Created Successfully','task'=>$task],201);
 }
 public function show($id){
     return response()->json($this->taskService->getTaskById($id));
